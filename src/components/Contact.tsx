@@ -65,8 +65,8 @@ const Contact = () => {
     {
       icon: <Mail className="h-5 w-5" />,
       title: 'Email',
-      content: 'contact@bud-mar.de',
-      href: 'mailto:contact@bud-mar.de'
+      content: 'kontakt@bud-mar.de',
+      href: 'mailto:kontakt@bud-mar.de'
     },
     {
       icon: <Phone className="h-5 w-5" />,
