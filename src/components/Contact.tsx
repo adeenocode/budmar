@@ -81,7 +81,7 @@ const Contact = () => {
         BUD-MAR BIS Marek Kuligowski<br />
         03-111 Warszawa, ul. Gladioli 17<br />
         NIP: 774-174-108<br />
-        Regon: 610420195
+        REGON: 610420195
       </>
     }
   ];
