@@ -9,22 +9,22 @@ const DetailedServices = () => {
     {
       key: 'innovative',
       icon: <Lightbulb className="w-6 h-6" />,
-      image: 'https://res.cloudinary.com/das743qa2/image/upload/c_scale,w_600/realizacje/lqtdd315nwqa8mnweemk.jpg'
+      image: 'https://res.cloudinary.com/das743qa2/image/upload/w_600/q_auto/realizacje/lqtdd315nwqa8mnweemk.jpg'
     },
     {
       key: 'ecological',
       icon: <Leaf className="w-6 h-6" />,
-      image: 'https://res.cloudinary.com/das743qa2/image/upload/f_auto,q_auto/v1/content/ybcskunlbkkmknuialt9'
+      image: 'https://res.cloudinary.com/das743qa2/image/upload/w_600/q_auto/content/ybcskunlbkkmknuialt9'
     },
     {
       key: 'modernization',
       icon: <Settings className="w-6 h-6" />,
-      image: 'https://res.cloudinary.com/das743qa2/image/upload/f_auto,q_auto/v1/content/mnlvtzaw7yhq5gcm2jzq'
+      image: 'https://res.cloudinary.com/das743qa2/image/upload/w_600/q_auto/content/mnlvtzaw7yhq5gcm2jzq'
     },
     {
       key: 'logistics',
       icon: <BarChart className="w-6 h-6" />,
-      image: 'https://res.cloudinary.com/das743qa2/image/upload/f_auto,q_auto/v1/content/jkfh2jf2edj3d3fuqpjw'
+      image: 'https://res.cloudinary.com/das743qa2/image/upload/w_600/q_auto/content/jkfh2jf2edj3d3fuqpjw'
     }
   ];
 
