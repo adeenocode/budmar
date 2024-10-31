@@ -42,18 +42,26 @@ const LanguageSwitcher: React.FC = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center space-x-2 bg-white/80 hover:bg-white px-3 py-2 rounded-lg transition-all duration-200"
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+        aria-label={`Select language. Current language: ${flags[language].name}`}
       >
         <img
           src={flags[language].flag}
-          alt={`${language} flag`}
+          alt={`${flags[language].name} flag`}
           className="w-6 h-4 object-cover rounded"
         />
         <span className="hidden sm:inline text-sm font-medium text-gray-700">{flags[language].name}</span>
-        <ChevronDown className="w-4 h-4 text-gray-500" />
+        <ChevronDown className="w-4 h-4 text-gray-500" aria-hidden="true" />
       </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-2 z-50">
+        <div 
+          className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg py-2 z-50"
+          role="menu"
+          aria-orientation="vertical"
+          aria-labelledby="language-menu"
+        >
           {Object.entries(flags).map(([lang, { flag, name }]) => (
             <button
               key={lang}
@@ -66,10 +74,12 @@ const LanguageSwitcher: React.FC = () => {
                   ? 'bg-blue-50 text-blue-600' 
                   : 'text-gray-700 hover:bg-gray-50'
               }`}
+              role="menuitem"
+              aria-current={language === lang ? 'true' : undefined}
             >
               <img
                 src={flag}
-                alt={`${lang} flag`}
+                alt={`${name} flag`}
                 className="w-6 h-4 object-cover rounded"
               />
               <span>{name}</span>
