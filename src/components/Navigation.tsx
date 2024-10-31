@@ -46,13 +46,18 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="bg-white shadow-lg fixed w-full z-50 transition-all duration-300">
+      <nav className="bg-white shadow-lg fixed w-full z-50 transition-all duration-300" role="navigation">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <div className="flex items-center space-x-2">
+              <a 
+                href="#" 
+                onClick={(e) => handleScroll(e, '#')}
+                className="flex items-center space-x-2"
+                aria-label="BUD-MAR - Back to homepage"
+              >
                 <div className="relative w-10 h-10">
-                  <svg viewBox="0 0 511 522" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  <svg viewBox="0 0 511 522" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full" aria-hidden="true">
                     <mask id="mask0_164_32" style={{maskType:'luminance'}} maskUnits="userSpaceOnUse" x="38" y="2" width="436" height="518">
                       <path d="M441.107 260.702C506.662 344.34 469.609 519.401 332.516 519.401H38V410.437H313.468C365.682 410.437 369.128 318.234 313.468 318.234H38V203.17H313.468C368.606 203.17 366.348 110.967 313.468 110.967H38V2.00022H332.516C445.705 2.00022 495.06 124.754 465.676 216.189C460.217 233.185 452.02 248.02 441.107 260.702Z" fill="white"/>
                     </mask>
@@ -73,7 +78,7 @@ const Navigation = () => {
                   <span className="text-logo-blue">BUD</span>
                   <span className="text-logo-blue-dark">MAR</span>
                 </div>
-              </div>
+              </a>
             </div>
             
             {/* Desktop Navigation */}
@@ -84,6 +89,7 @@ const Navigation = () => {
                   href={item.href}
                   onClick={(e) => handleScroll(e, item.href)}
                   className="text-gray-600 hover:text-blue-600 transition-colors duration-300 font-medium"
+                  aria-label={t(`navigation.${item.key}`)}
                 >
                   {t(`navigation.${item.key}`)}
                 </a>
@@ -97,20 +103,30 @@ const Navigation = () => {
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                aria-expanded={isMenuOpen}
+                aria-controls="mobile-menu"
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                {isMenuOpen ? (
+                  <X size={24} aria-hidden="true" />
+                ) : (
+                  <Menu size={24} aria-hidden="true" />
+                )}
               </button>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* Mobile Menu - Separate from nav to ensure proper stacking */}
+      {/* Mobile Menu */}
       <div 
+        id="mobile-menu"
         className={`md:hidden fixed inset-0 bg-white z-40 transition-transform duration-300 ease-in-out ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         style={{ top: '73px' }}
+        role="navigation"
+        aria-label="Mobile navigation"
       >
         <div className="container mx-auto px-6 py-8">
           <div className="flex flex-col space-y-8">
@@ -120,8 +136,9 @@ const Navigation = () => {
                 href={item.href}
                 onClick={(e) => handleScroll(e, item.href)}
                 className="text-gray-800 hover:text-blue-600 transition-colors duration-300 font-semibold text-xl flex items-center space-x-3 group"
+                aria-label={t(`navigation.${item.key}`)}
               >
-                <span className="w-2 h-2 rounded-full bg-blue-600 transform scale-0 group-hover:scale-100 transition-transform duration-300" />
+                <span className="w-2 h-2 rounded-full bg-blue-600 transform scale-0 group-hover:scale-100 transition-transform duration-300" aria-hidden="true" />
                 <span>{t(`navigation.${item.key}`)}</span>
               </a>
             ))}

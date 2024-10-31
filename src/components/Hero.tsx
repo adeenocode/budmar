@@ -24,7 +24,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80")',
+          backgroundImage: 'url("https://res.cloudinary.com/das743qa2/image/upload/f_auto,q_auto/v1/content/zsq3mzyichdh2hhacrjm")',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40" />

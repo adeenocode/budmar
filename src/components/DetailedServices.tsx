@@ -14,17 +14,17 @@ const DetailedServices = () => {
     {
       key: 'ecological',
       icon: <Leaf className="w-6 h-6" />,
-      image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80'
+      image: 'https://res.cloudinary.com/das743qa2/image/upload/f_auto,q_auto/v1/content/ybcskunlbkkmknuialt9'
     },
     {
       key: 'modernization',
       icon: <Settings className="w-6 h-6" />,
-      image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80'
+      image: 'https://res.cloudinary.com/das743qa2/image/upload/f_auto,q_auto/v1/content/mnlvtzaw7yhq5gcm2jzq'
     },
     {
       key: 'logistics',
       icon: <BarChart className="w-6 h-6" />,
-      image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80'
+      image: 'https://res.cloudinary.com/das743qa2/image/upload/f_auto,q_auto/v1/content/jkfh2jf2edj3d3fuqpjw'
     }
   ];
 

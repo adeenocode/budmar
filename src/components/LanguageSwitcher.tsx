@@ -2,7 +2,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { ChevronDown } from 'lucide-react';
 
-const flags = {
+type Language = 'de' | 'en' | 'es' | 'pl';
+
+type FlagInfo = {
+  flag: string;
+  name: string;
+};
+
+const flags: Record<Language, FlagInfo> = {
   de: {
     flag: "https://flagcdn.com/w40/de.png",
     name: "Deutsch"
@@ -25,6 +32,7 @@ const LanguageSwitcher: React.FC = () => {
   const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const currentLanguage = language as Language;
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -44,14 +52,17 @@ const LanguageSwitcher: React.FC = () => {
         className="flex items-center space-x-2 bg-white/80 hover:bg-white px-3 py-2 rounded-lg transition-all duration-200"
         aria-expanded={isOpen}
         aria-haspopup="true"
-        aria-label={`Select language. Current language: ${flags[language].name}`}
+        aria-label={`Select language. Current language: ${flags[currentLanguage].name}`}
+        id="language-menu"
       >
         <img
-          src={flags[language].flag}
-          alt={`${flags[language].name} flag`}
+          src={flags[currentLanguage].flag}
+          alt={`${flags[currentLanguage].name} flag`}
           className="w-6 h-4 object-cover rounded"
         />
-        <span className="hidden sm:inline text-sm font-medium text-gray-700">{flags[language].name}</span>
+        <span className="hidden sm:inline text-sm font-medium text-gray-700">
+          {flags[currentLanguage].name}
+        </span>
         <ChevronDown className="w-4 h-4 text-gray-500" aria-hidden="true" />
       </button>
 
@@ -62,7 +73,7 @@ const LanguageSwitcher: React.FC = () => {
           aria-orientation="vertical"
           aria-labelledby="language-menu"
         >
-          {Object.entries(flags).map(([lang, { flag, name }]) => (
+          {(Object.entries(flags) as [Language, FlagInfo][]).map(([lang, { flag, name }]) => (
             <button
               key={lang}
               onClick={() => {
@@ -70,12 +81,12 @@ const LanguageSwitcher: React.FC = () => {
                 setIsOpen(false);
               }}
               className={`w-full flex items-center space-x-3 px-4 py-2 text-sm ${
-                language === lang 
+                currentLanguage === lang 
                   ? 'bg-blue-50 text-blue-600' 
                   : 'text-gray-700 hover:bg-gray-50'
               }`}
               role="menuitem"
-              aria-current={language === lang ? 'true' : undefined}
+              aria-current={currentLanguage === lang ? 'true' : undefined}
             >
               <img
                 src={flag}
