@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Building2, Hammer, Wrench } from 'lucide-react';
 
 const Navigation = () => {
   const { t } = useLanguage();
@@ -49,9 +49,24 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <div className="text-3xl font-bold">
-              <span className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-3 py-1 rounded-lg">BUD</span>
-              <span className="text-gray-800 ml-1">MAR</span>
+            <div className="flex items-center space-x-2">
+              <div className="relative">
+                {/* Main building icon */}
+                <div className="bg-gradient-to-br from-blue-600 to-blue-700 p-2.5 rounded-xl shadow-lg">
+                  <Building2 className="h-6 w-6 text-white" />
+                </div>
+                {/* Decorative tools */}
+                <div className="absolute -top-1 -right-1 bg-yellow-500 p-1.5 rounded-full shadow-lg">
+                  <Wrench className="h-3 w-3 text-white" />
+                </div>
+                <div className="absolute -bottom-1 -right-1 bg-blue-800 p-1.5 rounded-full shadow-lg">
+                  <Hammer className="h-3 w-3 text-white" />
+                </div>
+              </div>
+              <div className="text-2xl font-bold tracking-tight">
+                <span className="text-blue-600">BUD</span>
+                <span className="text-gray-800">MAR</span>
+              </div>
             </div>
           </div>
           
