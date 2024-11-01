@@ -258,7 +258,7 @@ export const translations: Record<string, Translation> = {
       }
     },
     detailedServices: {
-      title: 'OFERTA',
+      title: 'SERVICIOS',
       items: {
         innovative: {
           title: 'Soluciones Innovadoras de Instalación',
