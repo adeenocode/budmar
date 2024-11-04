@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { Mail, Phone, Building2, Loader2, Send } from 'lucide-react';
 
 const Contact = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
@@ -78,10 +78,13 @@ const Contact = () => {
       icon: <Building2 className="h-5 w-5" aria-hidden="true" />,
       title: t('contact.office'),
       content: <>
-        BUD-MAR BIS Marek Kuligowski<br />
-        03-111 Warszawa, ul. Gladioli 17<br />
-        NIP: 774-174-108<br />
-        REGON: 610420195
+        {t('contact.companyInfo.name')}<br />
+        {t('contact.companyInfo.address')}<br />
+        {t('contact.companyInfo.taxId.label')}: {t('contact.companyInfo.taxId.value')}<br />
+        {language === 'de' && (
+          <>{t('contact.companyInfo.vatId.label')}: {t('contact.companyInfo.vatId.value')}<br /></>
+        )}
+        {t('contact.companyInfo.regon.label')}: {t('contact.companyInfo.regon.value')}
       </>
     }
   ];

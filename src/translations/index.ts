@@ -58,6 +58,22 @@ interface Translation {
     title: string;
     phone: string;
     office: string;
+    companyInfo: {
+      name: string;
+      address: string;
+      taxId: {
+        label: string;
+        value: string;
+      };
+      vatId?: {
+        label: string;
+        value: string;
+      };
+      regon: {
+        label: string;
+        value: string;
+      };
+    };
     form: {
       firstName: string;
       lastName: string;
@@ -135,6 +151,22 @@ export const translations: Record<string, Translation> = {
       title: 'KONTAKTIEREN SIE UNS',
       phone: 'Telefon',
       office: 'Büro',
+      companyInfo: {
+        name: 'BUD-MAR BIS Marek Kuligowski',
+        address: '03-111 Warszawa, ul. Gladioli 17',
+        taxId: {
+          label: 'PL Steuernummer',
+          value: 'PL7741271078'
+        },
+        vatId: {
+          label: 'DE Steuernummer',
+          value: 'DE05365485633'
+        },
+        regon: {
+          label: 'REGON',
+          value: '610420195'
+        }
+      },
       form: {
         firstName: 'Vorname',
         lastName: 'Nachname',
@@ -210,6 +242,18 @@ export const translations: Record<string, Translation> = {
       title: 'CONTACT US',
       phone: 'Phone',
       office: 'Office',
+      companyInfo: {
+        name: 'BUD-MAR BIS Marek Kuligowski',
+        address: '03-111 Warszawa, ul. Gladioli 17',
+        taxId: {
+          label: 'NIP',
+          value: 'PL7741271078'
+        },
+        regon: {
+          label: 'REGON',
+          value: '610420195'
+        }
+      },
       form: {
         firstName: 'First Name',
         lastName: 'Last Name',
@@ -285,6 +329,18 @@ export const translations: Record<string, Translation> = {
       title: 'CONTÁCTENOS',
       phone: 'Teléfono',
       office: 'Oficina',
+      companyInfo: {
+        name: 'BUD-MAR BIS Marek Kuligowski',
+        address: '03-111 Warszawa, ul. Gladioli 17',
+        taxId: {
+          label: 'NIP',
+          value: 'PL774174108'
+        },
+        regon: {
+          label: 'REGON',
+          value: '610420195'
+        }
+      },
       form: {
         firstName: 'Nombre',
         lastName: 'Apellido',
@@ -360,6 +416,18 @@ export const translations: Record<string, Translation> = {
       title: 'KONTAKT Z NAMI',
       phone: 'Telefon',
       office: 'Biuro',
+      companyInfo: {
+        name: 'BUD-MAR BIS Marek Kuligowski',
+        address: '03-111 Warszawa, ul. Gladioli 17',
+        taxId: {
+          label: 'NIP',
+          value: '774174108'
+        },
+        regon: {
+          label: 'REGON',
+          value: '610420195'
+        }
+      },
       form: {
         firstName: 'Imię',
         lastName: 'Nazwisko',
