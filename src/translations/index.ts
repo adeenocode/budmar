@@ -153,7 +153,7 @@ export const translations: Record<string, Translation> = {
       office: 'Büro',
       companyInfo: {
         name: 'BUD-MAR BIS Marek Kuligowski',
-        address: '03-111 Warszawa, ul. Gladioli 17',
+        address: '03-111 Warschau, ul. Gladioli 17',
         taxId: {
           label: 'PL Steuernummer',
           value: 'PL7741271078'
