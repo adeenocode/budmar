@@ -23,9 +23,8 @@ const Footer = () => (
               </g>
             </svg>
           </div>
-          <div className="text-xl font-bold tracking-tight font-geologica">
-            <span className="text-logo-blue-light">BUD</span>
-            <span className="text-white">MAR</span>
+          <div className="text-xl font-bold tracking-tight font-geologica text-white">
+            BUDMAR
           </div>
         </div>
         <div className="text-center md:text-right text-gray-400">

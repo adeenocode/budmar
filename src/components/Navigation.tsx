@@ -74,9 +74,17 @@ const Navigation = () => {
                     </g>
                   </svg>
                 </div>
-                <div className="text-2xl font-black tracking-tight font-geologica">
-                  <span className="text-logo-blue">BUD</span>
-                  <span className="text-logo-blue-dark">MAR</span>
+                <div 
+                  className="text-2xl font-black tracking-tight font-geologica"
+                  style={{
+                    background: 'linear-gradient(270deg, #1F3978 22.01%, #0D1A38 76.41%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    textFillColor: 'transparent'
+                  }}
+                >
+                  BUDMAR
                 </div>
               </a>
             </div>
