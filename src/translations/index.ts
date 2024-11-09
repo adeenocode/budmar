@@ -164,7 +164,7 @@ export const translations: Record<string, Translation> = {
         },
         regon: {
           label: 'REGON',
-          value: '610420195'
+          value: '611320105'
         }
       },
       form: {
@@ -251,7 +251,7 @@ export const translations: Record<string, Translation> = {
         },
         regon: {
           label: 'REGON',
-          value: '610420195'
+          value: '611320105'
         }
       },
       form: {
@@ -338,7 +338,7 @@ export const translations: Record<string, Translation> = {
         },
         regon: {
           label: 'REGON',
-          value: '610420195'
+          value: '611320105'
         }
       },
       form: {
@@ -425,7 +425,7 @@ export const translations: Record<string, Translation> = {
         },
         regon: {
           label: 'REGON',
-          value: '610420195'
+          value: '611320105'
         }
       },
       form: {
