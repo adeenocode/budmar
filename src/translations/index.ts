@@ -355,7 +355,7 @@ export const translations: Record<string, Translation> = {
     partners: {
       title: 'COLABORACIONES'
     }
-  }
+  },
   pl: {
     navigation: {
       home: 'Strona Główna',
