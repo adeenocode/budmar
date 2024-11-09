@@ -280,7 +280,7 @@ export const translations: Record<string, Translation> = {
     hero: {
       title: 'Instalaciones llevadas a la',
       highlight: 'perfección',
-      description: 'Instalaciones modernas para edificios residenciales, industriales y de oficinas. Eficiencia y confort a través de tecnologías avanzadas.',
+      description: 'Instalaciones modernas para edificios residenciales, industriales y oficinas. Eficiencia y confort a través de tecnologías avanzadas.',
       learnMore: 'Más información',
       contactUs: 'Contáctenos'
     },
@@ -293,7 +293,7 @@ export const translations: Record<string, Translation> = {
     services: {
       title: 'NUESTROS SERVICIOS',
       items: {
-        plumbing: 'Sistemas de agua, alcantarillado y pluviales',
+        plumbing: 'Sistemas de alcantarillado y aguas pluviales',
         sanitary: 'Instalación de equipos sanitarios',
         heating: 'Sistemas de calefacción central',
         ventilation: 'Ventilación y aire acondicionado',
@@ -305,20 +305,20 @@ export const translations: Record<string, Translation> = {
       title: 'SERVICIOS',
       items: {
         innovative: {
-          title: 'Soluciones Innovadoras de Instalación',
-          description: 'Nos especializamos en el diseño e instalación de sistemas para edificios residenciales, industriales y de oficinas, utilizando las últimas tecnologías para garantizar la máxima eficiencia y modernidad. Implementamos sistemas avanzados de refrigeración por agua y vapor que garantizan la optimización de costos y el confort del usuario.'
+          title: 'Soluciones innovadoras en instalaciones',
+          description: 'Estamos especializados en el diseño y ejecución de instalaciones para edificios plurifamiliares, industriales y de oficinas, utilizando las últimas tecnologías para garantizar la máxima eficiencia y modernidad. Implantamos sistemas avanzados de refrigeración por agua y refrigeración evaporativa que garantizan la optimización de costes y el confort.'
         },
         ecological: {
-          title: 'Ecología y Tecnología',
-          description: 'Cuidamos el medio ambiente mediante el uso de sistemas de calefacción ecológicos y soluciones innovadoras en agua y saneamiento, lo que confirma nuestro compromiso con el desarrollo sostenible y los más altos estándares de calidad.'
+          title: 'Ecología y tecnología',
+          description: 'Cuidamos el medio ambiente mediante el uso de sistemas de calefacción ecológicos y soluciones innovadoras de saneamiento de agua y alcantarillado, lo que confirma nuestro compromiso con la sostenibilidad y los más altos estándares de calidad.'
         },
         modernization: {
-          title: 'Modernización y Servicio',
-          description: 'Nos ocupamos de la modernización y el mantenimiento de los sistemas de instalación existentes en edificios residenciales y comerciales, asegurando su continuidad y modernidad con una mínima interrupción para residentes y usuarios.'
+          title: 'Modernización y mantenimiento',
+          description: 'Modernizamos y mantenemos los sistemas de fontanería y electricidad existentes en edificios residenciales y comerciales, garantizando que sigan siendo operativos y modernos con las mínimas molestias para residentes y usuarios.'
         },
         logistics: {
-          title: 'Sistemas Avanzados para Logística y Almacenes',
-          description: 'Ofrecemos instalaciones energéticamente eficientes para instalaciones de almacenamiento y logística, incluyendo sistemas de recuperación de calor y sistemas de calefacción de bajo consumo. Nuestras soluciones están diseñadas para minimizar el impacto en las operaciones en curso y maximizar el ahorro.'
+          title: 'Sistemas avanzados de logística y almacenamiento',
+          description: 'Ofrecemos instalaciones energéticamente eficientes para instalación de almacenes e instalaciones logísticas, incluidos sistemas de recuperación de calor y sistemas de calefacción energéticamente eficientes. Nuestras soluciones están diseñadas para minimizar el impacto en las operaciones actuales y maximizar el ahorro.'
         }
       }
     },
@@ -355,7 +355,7 @@ export const translations: Record<string, Translation> = {
     partners: {
       title: 'COLABORACIONES'
     }
-  },
+  }
   pl: {
     navigation: {
       home: 'Strona Główna',
